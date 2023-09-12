@@ -21,7 +21,7 @@ export default function App() {
       .then((res) => res.json())
       .then((data) => dispatch({ type: 'dataReceived', payload: data }))
       .catch((_) => dispatch({ type: 'dataFailed' }));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className='app'>
